@@ -1,6 +1,6 @@
 FROM ubuntu:14.04
 RUN apt-get update -qqy
-RUN apt-get install -qqy openssh-server screen nano sudo psmisc cron \
+RUN apt-get install -qqy openssh-server screen nano sudo psmisc \
  && mkdir -p /var/run/sshd && mkdir -p /root/.ssh \
  && echo 'root:root' | chpasswd \
  && sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config \
